@@ -1,36 +1,22 @@
 # cljsh
 
-FIXME: description
+Write shell scripts in CLJS running on NodeJS.
 
-## Installation
+## Building
 
-Download from http://example.com/FIXME.
+```
+$ lein cljsbuild once
+```
 
 ## Usage
 
-FIXME: explanation
-
-    $ java -jar cljsh-0.1.0-standalone.jar [args]
-
-## Options
-
-FIXME: listing of options this app accepts.
-
-## Examples
-
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
+```
+$ node out/main.js myfile.cljs
+```
 
 ## License
 
-Copyright © 2016 FIXME
+Copyright © 2016 lambdas-of-love
 
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.
