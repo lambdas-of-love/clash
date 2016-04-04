@@ -1,4 +1,4 @@
-# cljsh
+# clash
 
 Write shell scripts in CLJS running on NodeJS.
 

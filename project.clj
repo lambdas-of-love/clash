@@ -1,4 +1,4 @@
-(defproject cljsh "0.1.0-SNAPSHOT"
+(defproject clash "0.1.0-SNAPSHOT"
   :description "FIXME: write description"
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"
@@ -14,8 +14,7 @@
         :source-paths ["src"]
         :compiler {
           :target        :nodejs
-          :main          cljsh.core
+          :main          clash.core
           :output-to     "out/main.js"
           :output-dir    "out"
           :optimizations :none}}]})
-

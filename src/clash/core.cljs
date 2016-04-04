@@ -1,4 +1,4 @@
-(ns cljsh.core
+(ns clash.core
   (:require [clojure.string :as string]
             [cljs.nodejs :as nodejs]
             [replumb.core :as replumb]))

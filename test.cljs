@@ -1,5 +1,5 @@
 (ns main.test
-  (:require [cljsh.core :as sh]))
+  (:require [clash.core :as sh]))
 
 (println "hello world!")
 (.log js/console "hello!")
