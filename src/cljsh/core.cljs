@@ -12,9 +12,11 @@
   (.readFileSync fs filename "utf-8"))
 
 (defn -main [& args]
-  (replumb/read-eval-call {:target :nodejs}
+  (replumb/read-eval-call {:target :nodejs
+                           :context :statement ;; Will eval multiple exprs with this.
+                           }
                           (fn [result]
                             (when-not (:success? result)
-                              (println "it didn't work :(")))
+                              (println result)))
                           (node-read-file-sync (first args))))
 (set! *main-cli-fn* -main)
