@@ -11,7 +11,7 @@ $ lein cljsbuild once
 ## Usage
 
 ```
-$ node out/main.js myfile.cljs
+$ node out/main.js test.cljs
 ```
 
 ## License
