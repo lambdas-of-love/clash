@@ -1,0 +1,25 @@
+{
+  "name": "clash",
+  "version": "1.0.0",
+  "description": "Write shell scripts in CLJS running on NodeJS.",
+  "main": "out/main.js",
+  "bin": {
+    "clash": "out/main.js"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lambdas-of-love/clash.git"
+  },
+  "author": "",
+  "license": "Eclipse",
+  "bugs": {
+    "url": "https://github.com/lambdas-of-love/clash/issues"
+  },
+  "homepage": "https://github.com/lambdas-of-love/clash#readme"
+}
