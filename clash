@@ -1,10 +1,12 @@
 #!/bin/bash
 
 BASE_DIRECTORY=$(cd `dirname $0` && pwd)               # Get the location of the current script
-RESOLVED_DIRECTORY=`readlink -f $BASE_DIRECTORY/clash` # In case we're symlinked at /usr/local/bin or something.
+RESOLVED_DIRECTORY=`readlink $BASE_DIRECTORY/clash`    # In case we're symlinked at /usr/local/bin or something.
 DIRECTORY=`dirname $RESOLVED_DIRECTORY`                # Remove the filename
 
+echo $DIRECTORY
+
 # The first argument to main.js is the class path of CLJS files.
-nodejs "$DIRECTORY/main.js" "$DIRECTORY/lib" $1
+node "$DIRECTORY/main.js" "$DIRECTORY/lib" $1
 
 
