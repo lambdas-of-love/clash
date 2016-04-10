@@ -1,8 +1,17 @@
 #!/bin/bash
 
-BASE_DIRECTORY=$(cd `dirname $0` && pwd)               # Get the location of the current script
-RESOLVED_DIRECTORY=`readlink $BASE_DIRECTORY/clash`    # In case we're symlinked at /usr/local/bin or something.
-DIRECTORY=`dirname $RESOLVED_DIRECTORY`                # Remove the filename
+# Get the location of the current script
+BASE_DIRECTORY=$(cd `dirname $0` && pwd)
+
+# In case we're symlinked at /usr/local/bin or something.
+if [ "$(uname)" == "Darwin" ]; then
+    RESOLVED_DIRECTORY=`readlink $BASE_DIRECTORY/clash`
+else
+    RESOLVED_DIRECTORY=`readlink -f $BASE_DIRECTORY/clash`
+fi
+
+# Remove the filename
+DIRECTORY=`dirname $RESOLVED_DIRECTORY`
 
 echo $DIRECTORY
 
