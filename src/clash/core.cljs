@@ -21,7 +21,7 @@
 
 (defn -main [& args]
   (let [options (replumb/options :nodejs
-                                 ["lib"]
+                                 [(first args)]
                                  read-file-with-callback)
         merged-options (merge options
                               {:context :statement
@@ -33,5 +33,5 @@
                                 (-> result
                                     replumb/result->string
                                     println)))
-                          (node-read-file-sync (first args)))))
+                          (node-read-file-sync (second args)))))
 (set! *main-cli-fn* -main)

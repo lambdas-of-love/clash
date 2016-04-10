@@ -7,3 +7,5 @@
 (println "I have"
          (count (sh/slurp "test.cljs"))
          "characters.")
+
+(time (map inc (range 100)))
