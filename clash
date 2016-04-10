@@ -13,8 +13,6 @@ fi
 # Remove the filename
 DIRECTORY=`dirname $RESOLVED_DIRECTORY`
 
-echo $DIRECTORY
-
 # The first argument to main.js is the class path of CLJS files.
 node "$DIRECTORY/main.js" "$DIRECTORY/lib" $1
 
