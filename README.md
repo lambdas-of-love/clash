@@ -8,10 +8,16 @@ Write shell scripts in CLJS running on NodeJS.
 $ lein cljsbuild once
 ```
 
+## Installing
+
+```
+$ ./make-links.sh
+```
+
 ## Usage
 
 ```
-$ node out/main.js test.cljs
+$ clash test.cljs
 ```
 
 ## License
